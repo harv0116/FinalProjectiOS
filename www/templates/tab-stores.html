@@ -1,0 +1,15 @@
+<ion-view view-title="Stores">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="store in stores" type="item-text-wrap" href="#/tab/store/{{store.id}}">
+        <h2>{{store.longName}}</h2>
+        <p>{{store.address}}</p>
+        <p>{{store.city}}, {{store.region}} {{store.fullPostalCode}}. {{store.country}}. {{store.distance}} miles away.</p>
+        <p>{{store.phone}}</p>
+        <p>Hours: {{store.hours}}</p>
+        
+        
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

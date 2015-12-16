@@ -1,0 +1,18 @@
+<ion-view view-title="Main Page">
+  <ion-content class="padding">
+    <div class="bar bar-helper item-input-inset">
+    	<label class="item-input-wrapper">
+        	<i class="ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="data.search" value={{data.search}}>
+        </label>
+        <button class="button button-balanced" ng-click="search(data.search)">
+        Go
+        </button>
+    </div>
+    <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" auto-play="true">
+    	<ion-slide ng-repeat="product in products track by $index">
+        	<img ng-src="{{product.image}}" height="300" width="300"/>
+        </ion-slide>
+    </ion-slide-box>    
+  </ion-content>
+</ion-view>
